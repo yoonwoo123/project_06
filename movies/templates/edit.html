@@ -1,0 +1,10 @@
+<form action='/movies/{{u_movie.id}}/update/' method="POST">
+    {% csrf_token %}
+    영화제목:<input type="text" name="title" value="{{u_moive.title}}"><br>
+    관객 수:<input type="int" name="audience" value="{{u_movie.audience}}"><br>
+    장르:<input type="text" name="genre" value="{{u_movie.genre}}"><br>
+    평점:<input type="int" name="score" value="{{u_movie.score}}"><br>
+    포스터:<input type="text" name="poster_url" value="{{u_movie.poster_url}}"><br>
+    영화 소개:<textarea name="description">{{u_movie.description}}</textarea><br>
+    <input type="submit">
+</form>
